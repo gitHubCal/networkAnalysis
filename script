@@ -1,0 +1,44 @@
+#while true; do
+    #delete header
+    awk 'NR>1' ./IO/input >./IO/output
+    
+    #delete seq# and fill empty column
+    awk -F"\t" -v OFS="\t" '{
+           for (i=1;i<10;i++) {
+               if (i == 9){
+                   $i = ""
+               }
+             if ($i == " " ) {
+                 
+                 
+                 $i="0"}
+           }
+           print $0
+     }' ./IO/output > ./IO/output.new && mv ./IO/output.new ./IO/output
+     
+     
+     #awk -F"\t" -v OFS="\t" '{
+     #      for (i=1;i<10;i++) {
+     #         
+     #        if ($i == " " ) {
+     #            
+     #            
+     #            $i="0"}
+     #       if (i == 8){
+     #         print $9
+     #          }
+     #      }
+           
+           
+          
+     #}' input2 > extSeq.new && mv extSeq.new extSeq
+    echo "Output Created"
+ #   sleep 10
+    
+#done
+ 
+ 
+
+
+
+

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">   
+    <title>Network Analysis</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="../styles/index.css">
+</head>
+<body>
+    <div class="container">
+        <nav class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        
+                    </button>
+                    <div class="navbar-brand" id="index"><a href="../index.html">Network Visualization</a></div>
+                </div>
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav">
+                    
+                        <li class="link" id="analysis1link"><a href="../analysis1/analysis1.html">Analysis 1</a></li>
+                        <li class="link" id="analysis2link"><a href="../analysis2/analysis2.html">Analysis 2</a></li>
+                        <li class="link" id="analysis3link"><a href="../analysis3/analysis3.html">Analysis 3</a></li>
+                        <li class="link" id="analysis4link"><a href="../analysis4/analysis4.html">Analysis 4</a></li>
+                        <li class="link" id="analysis5link"><a href="../analysis5/analysis5.html">Analysis 5</a></li>
+                        <li class="active link" id="analysis6link"><a href="analysis6.html">Analysis 6</a></li>
+                        <!-- More links to further analysis if necessary-->
+                        <!-- Can add dropdown if necessary -->
+                    </ul>
+                </div><!-- /.navbar-collapse -->
+            </div><!-- /.container -->
+        </nav>
+        
+        <div class="container body">
+            <div class="row content">
+                <div class="col-lg-12 col-xs-12">
+                    <div id="analysis6"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../scripts/jquery-2.1.4.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <!-- Plotly.js -->
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script src="../scripts/plotFunctions.js"></script>
+    <script>
+        var layout = returnLayout('Closed Connections','Time','','Number of Connections','log','closest');
+        load("../json/FinVsTime.json","analysis6",layout);
+    </script>
+</body>
+</html>

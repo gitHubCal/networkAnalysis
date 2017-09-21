@@ -1,0 +1,33 @@
+body {
+    padding-top: 70px;
+}
+html,body {
+    height: 100%;
+    width: 100%;
+}
+
+.navbar-inverse .navbar-brand:hover, 
+.navbar-inverse .navbar-brand:focus {
+    background-color: transparent;
+    color: #999999;
+}
+
+.content {
+    text-align: center;
+}
+.contentContainerDiv {
+    padding: 1px;
+}
+
+/*Heights of content will be redfined later if necessary*/
+.content {
+    margin-bottom: 10px;
+}
+
+#analysis1Index,#analysis2Index,#analysis3Index,#analysis4Index,#analysis5Index,#analysis6Index {
+    height: 60vh;
+}
+
+.body {
+    margin-top: 20px;
+}
